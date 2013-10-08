@@ -4,6 +4,7 @@
 	jda.GridSwitcher = (function(images) {
 		//	constants
 		var SETTINGS = {
+			element: '.section-content',
 			container: '.grid',
 			elements: '.tile',
 			info: '.project-info',
@@ -15,7 +16,8 @@
 		};
 
 		//	attributes
-		var grid = document.querySelector(SETTINGS.container),
+		var element = document.querySelector(SETTINGS.element),
+			grid = element.querySelector(SETTINGS.container),
 			tiles,
 			tileHeight = 200,
 			tileWidth = 200,
@@ -23,8 +25,8 @@
 			gridWidth,
 			gridHeight,
 			numRows = 3,
-			info = document.querySelector(SETTINGS.info),
-			backButton = document.querySelector(SETTINGS.backButton),
+			info = element.querySelector(SETTINGS.info),
+			backButton = element.querySelector(SETTINGS.backButton),
 			i = 0,
 			xPos = 0,
 			yPos = 0,
@@ -39,9 +41,9 @@
 			var currentTile,
 				gridStr = '';
 			grid.innerHTML = '';
-			grid.classList.remove(SETTINGS.selected);
-			info.classList.remove(SETTINGS.selected);
-
+			
+			element.classList.remove(SETTINGS.selected);
+			
 			
 
 			for ( ; i < numTiles; i++) {
@@ -53,7 +55,7 @@
 			tiles = document.querySelectorAll(SETTINGS.elements);
 
 			for ( i = 0 ; i < numTiles; i++) {
-				tiles[i].querySelector('a').addEventListener(MouseEvent.CLICK, tile_clickHandler);
+				tiles[i].querySelector('a').addEventListener(UIEvent.CLICK, tile_clickHandler);
 				tiles[i].querySelector(SETTINGS.frontFace).style.backgroundImage = "url('" + images[i] + "')";
 			}
 
@@ -73,8 +75,7 @@
 
 			tileWidth = tiles[0].offsetWidth + 1;
 			tileHeight = tiles[0].offsetHeight + 1;
-			console.log("tileWidth: ")
-
+			
 			tilesPerRow = Math.floor(grid.offsetWidth / tileWidth);
 			
 			for ( i = 0 ; i < numTiles; i++) {
@@ -106,7 +107,6 @@
 					tiles[i].querySelector(SETTINGS.backFace).style.backgroundImage = "url('" + images[currentPos] + "')";
 				}
 				setTimeout(function() {
-					//if (currentPos !== randTiles[countScope] && isHovered) {
 					if (isHovered) {
 						tiles[randTiles[countScope]].classList.add(SETTINGS.selected);
 					} else {
@@ -119,8 +119,7 @@
 			}
 
 			
-			grid.classList.toggle(SETTINGS.selected);
-			info.classList.toggle(SETTINGS.selected);
+			element.classList.toggle(SETTINGS.selected);
 		}
 	});
 }(window.jda = window.jda || {}));

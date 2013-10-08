@@ -43,6 +43,7 @@ var MainNav = (function MainNav(el, options) {
 		};
 
 	(function () {
+		console.log("Main nav!!!! ");
 		element = document.querySelector(el);
 		container = document.getElementById(SETTINGS.container);
 		header = document.getElementById(SETTINGS.header);
@@ -56,16 +57,23 @@ var MainNav = (function MainNav(el, options) {
 			numLinks = links.length;
 
 		for ( ; i < numLinks; i++ ) {
-			links[i].addEventListener(MouseEvent.CLICK, links_clickHandler);
+			links[i].addEventListener(UIEvent.CLICK, links_clickHandler);
 		}
 
 		CustomEvent.addEventListener('link-click', updateSection);
+
+		if (window.location.hash) {
+			var target = window.location.hash.replace('#','');
+			updateSection(target);
+			console.log("------ load with hash!!!");
+			loadSection(target);
+		}
 	}
 
 	function updateSection(target) {
 		currentSection = document.querySelector('.' + target);
 		if (header.querySelector('a.' + target + '-button')) {
-			header.querySelector('a.' + target + '-button').classList.add('current');	
+			header.querySelector('a.' + target + '-button').classList.add('current');
 		}
 	}
 
@@ -89,6 +97,11 @@ var MainNav = (function MainNav(el, options) {
 
 		this.classList.add('current');
 		
+		loadSection(target);
+	}
+
+	function loadSection(target) {
+		console.log("loadSection ", target);
 		//	go to home
 		if ( (currentSection && currentSection.classList.contains('home'))) {
 			container.classList.remove('is-home');

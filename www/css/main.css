@@ -21,6 +21,7 @@ Author:    jandrade
 3. Module
     3.1. Form
     3.2. Grid
+    3.3. Carousel
 4. State
 5. Theme
 
@@ -286,7 +287,8 @@ header {
 	}
  
 	.home-nav {
-	    margin-top: 5%;
+	    margin: 5% auto;
+	    max-width: 700px;
 	    perspective: 1000;
 	    -webkit-perspective: 1000;
 	    transform-style: preserve-3d;
@@ -469,18 +471,19 @@ form p {
 		}
 
 		.back {
-		   
-		    transform: rotateY(180deg);
+		   	transform: rotateY(180deg);
 		    -moz-transform: rotateY(180deg);
 		    -webkit-transform: rotateY(180deg);
 		     z-index: 3;
 		}
 
 	.tile.detail {
-		transform: rotateY(180deg);
-	    -webkit-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 	    -moz-transform: rotateY(180deg);
-
+		transform: rotateY(180deg);
+	    
 	    margin: 0;
 	}
 
@@ -513,12 +516,12 @@ form p {
 			visibility: hidden;
 		}
 
-			.back-button.detail {
+		.detail .back-button {
 				opacity: 0;
 				visibility: hidden;
 			}
 
-		.project-info.detail {
+		.detail .project-info {
 			opacity: 1;
 		    visibility: visible;
 		    
@@ -592,6 +595,47 @@ form p {
   			.is-collapsed .close-button {
   				display: none;
   			}
+
+  	.section-content {
+  		height: 100%;
+  		position: relative;
+  		width: 100%;
+  	}
+
+  	.project-images {
+  		height: 100%;
+  		left: 0;
+  		overflow: hidden;
+  		position: absolute;
+  		top: 0;
+  		width: 100%;
+  	}
+
+  		.mask {
+  			width: 400%;
+  		}
+
+  		.project-images img {
+  			float: left;
+  			margin: 0;
+  		}
+
+/* 3.3. Carousel
+   ========================================================================== */
+
+.carousel {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+}
+.carousel .mask {
+	transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+
+    transform: translate3d(0px,0,0px);
+    -moz-transform: translate3d(0px,0,0px);
+    -webkit-transform: translate3d(0px,0,0px);
+}
 
 /* ==========================================================================
    4. State

@@ -21,12 +21,14 @@ var Projects = function() {
 		closeButton = element.querySelector(SETTINGS.closeButton);
 		infoButton = element.querySelector(SETTINGS.infoButton);
 
+		window.c = new jda.Carousel('.project-images');
+
 		addEventListeners();
 	}());
 
 	function addEventListeners() {
-		closeButton.addEventListener(MouseEvent.CLICK, closeButton_clickHandler);
-		infoButton.addEventListener(MouseEvent.CLICK, infoButton_clickHandler);
+		closeButton.addEventListener(UIEvent.CLICK, closeButton_clickHandler);
+		infoButton.addEventListener(UIEvent.CLICK, infoButton_clickHandler);
 	}
 
 	function closeButton_clickHandler(e) {
