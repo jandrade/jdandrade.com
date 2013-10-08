@@ -59,6 +59,7 @@
                 <section class="projects">
                     <h1>Projects</h1>
                     <ul class="grid"></ul>
+                    <a class="default-button back-button" href="#">&lt; BACK</a>
                     <div class="project-info is-openned">
                         <p>ldfj asdlk fajdsklfjsdlkfsdjflksd fjsldkf jdslk fjdslaf sdjflksd fjdslkf jsdlkfjlkjsdflkds jaflksdjfsld</p>
                         <a class="default-button close-button" href="#">X</a>
@@ -71,18 +72,24 @@
                     <form class="contact-form">
                     <p>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="">
-                        <span class="error error-email">Email required</span>
+                        <div class="form-field">
+                            <input type="text" name="email" id="email" value="" class="js-required js-email">
+                            <span class="error error-email">Email required</span>
+                        </div>
                     </p>
                     <p>
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" value="">
-                        <span class="error error-name">Name required</span>
+                        <div class="form-field">
+                            <input type="text" name="name" id="name" value="" class="js-required">
+                            <span class="error error-name">Name required</span>
+                        </div>
                     </p>
                     <p>
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" value=""></textarea>
-                        <span class="error error-message">Message required</span>
+                        <div class="form-field">
+                            <textarea name="message" id="message" value="" class="js-required"></textarea>
+                            <span class="error error-message">Message required</span>
+                        </div>
                     </p>
                     <p class="r-align">
                         <button class="submit-button">SEND</button>
@@ -111,7 +118,6 @@
 
         <script src="js/jda/utils.js"></script>
         <script src="js/jda/grid.js"></script>
-        <script src="js/jda/alphabit.js"></script>
         <script src="js/jda/contact.js"></script>
         <script src="js/jda/projects.js"></script>
         <script src="js/main.js"></script>

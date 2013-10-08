@@ -15,36 +15,57 @@ var Contact = function() {
 		element = document.querySelector(SETTINGS.selector);
 		form = element.querySelector(SETTINGS.form);
 		fields = form.querySelectorAll(SETTINGS.fields);
-		 
+
 		addEventListeners();
 	}());
 
 	function validate() {
 		var i = 0,
-			fieldsCollection = [],
+			j = 0,
+			numErrors = 0,
 			currentField,
-			numFields = fields.length;
+			fieldsCollection = {},
+			isValid,
+			numFields = fields.length,
+			fnValidation,
+			numValidations;
 
-		for ( ; i < numFields; i++ ) {
+		for (; i < numFields; i++) {
+			isValid = true;
+
 			var countScope = 0;
-			currentField = {
-				element: fields[i],
-				isInvalid: false
-			};
+			currentField = fields[i];
+			
 
-			if (currentField.element.value === '') {
-				form.querySelector(SETTINGS.errorPrefix + currentField.element.name).classList.add(SETTINGS.invalid);
-				setTimeout(function() {
-					currentField = {
-						element: fields[countScope],
-						isInvalid: false
-					};
-					form.querySelector(SETTINGS.errorPrefix + currentField.element.name).classList.remove(SETTINGS.invalid);
-					countScope++;
-				},2000);
+			numValidations = fields[i].classList.length;
+
+			for ( j = 0; j < numValidations; j++) {
+				fnValidation = currentField.classList[j].replace('js-', '');
+				
+				if (!ValidatorRules[fnValidation](currentField.value)) {
+					isValid = false;
+				}
 			}
-			fieldsCollection.push(currentField);
+
+			if (!isValid) {
+				fieldsCollection[currentField.name] = currentField;
+				form.querySelector(SETTINGS.errorPrefix + currentField.name).classList.add(SETTINGS.invalid);
+				numErrors++;
+			}
+
+			
 		}
+
+		setTimeout(hideErrors, 2000);
+
+		function hideErrors() {
+			for (var name in fieldsCollection) {
+				form.querySelector(SETTINGS.errorPrefix + name).classList.remove(SETTINGS.invalid);
+			}
+		}
+
+		return numErrors === 0;
+		
 	}
 
 	function addEventListeners() {
@@ -53,7 +74,21 @@ var Contact = function() {
 
 	function submit_clickHandler(e) {
 		e.preventDefault();
-		validate();
+		if (validate()) {
+			alert("send");
+		}
 		return false;
+	}
+};
+
+var FormValidator = {};
+
+
+var ValidatorRules = {
+	required: function(value) {
+		return /\S+$/.test(value);
+	},
+	email: function(value) {
+		return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(value);
 	}
 };

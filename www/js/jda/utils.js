@@ -37,6 +37,7 @@ if (!Array.prototype.shuffle) {
 	        this[i] = this[j];
 	        this[j] = temp;
 	    }
+	    console.log("shuffle: ", this);
 	    return this;
 	}
 }
