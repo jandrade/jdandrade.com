@@ -1,7 +1,19 @@
 window.onload = function() {
-
+	var mainApp = new MainApp();
 	var homeNav = new MainNav('.home-nav');
 	var mainNav = new MainNav('.main-nav');
+	mainApp.load('projects');
+	return;
+
+	if (window.location.hash) {
+		var target = window.location.hash.replace('#','');
+		loadSection(target);
+	}
+
+	CustomEvent.addEventListener('link-click', function(target) {
+		console.log("///// llink changed!!!!!!!!");
+		
+	});
 
 	document.getElementById('header').classList.add('is-visible');
 	document.querySelector('.home').classList.add('is-visible');
@@ -26,18 +38,66 @@ window.onload = function() {
 
 };
 
+var MainApp = function(el, options) {
+
+	var currentSection,
+		container,
+		SETTINGS = {
+			container: 'wrapper',
+			default: '.home'
+		};
+		
+
+	(function() {
+		console.log("new MainApp.....");
+		container = document.getElementById(SETTINGS.container);
+		currentSection = document.querySelector(SETTINGS.default);
+	}());
+
+	function load(target) {
+		console.log("////// load section: ", target);
+		if (currentSection === null) {
+			currentSection = document.querySelector('.error404');
+		}
+
+		currentSection.classList.remove('is-visible', 'is-open');
+
+		currentSection = document.querySelector('.' + target);
+
+		//	go to home
+		if ( (currentSection && currentSection.classList.contains('home'))) {
+			container.classList.remove('is-home');
+		}
+
+		if (target === '/' || target === './') {
+			target = 'home';
+			container.classList.add('is-home');
+		}
+
+		if (target === 'projects' && typeof projects === 'undefined') {
+			projects = new Projects();
+		}
+
+		if (target === 'contact' && typeof contact === 'undefined') {
+			contact = new Contact();
+		}
+
+		currentSection.classList.add('is-visible', 'is-open');
+	}
+
+	return {
+		load: load
+	};
+};
+
 
 var MainNav = (function MainNav(el, options) {
 	var element,
-		container,
 		header,
-		currentSection,
 		links,
 		projects,
 		contact,
 		SETTINGS = {
-			default: '.home',
-			container: 'wrapper',
 			header: 'header',
 			links: 'a'
 		};
@@ -45,10 +105,8 @@ var MainNav = (function MainNav(el, options) {
 	(function () {
 		console.log("Main nav!!!! ");
 		element = document.querySelector(el);
-		container = document.getElementById(SETTINGS.container);
 		header = document.getElementById(SETTINGS.header);
 		links = element.querySelectorAll(SETTINGS.links);
-		currentSection = document.querySelector(SETTINGS.default);
 		addEventListeners();
 	})();
 
@@ -62,16 +120,11 @@ var MainNav = (function MainNav(el, options) {
 
 		CustomEvent.addEventListener('link-click', updateSection);
 
-		if (window.location.hash) {
-			var target = window.location.hash.replace('#','');
-			updateSection(target);
-			console.log("------ load with hash!!!");
-			loadSection(target);
-		}
 	}
 
 	function updateSection(target) {
-		currentSection = document.querySelector('.' + target);
+		console.log("------ UPDATE SECTION -----------");
+		
 		if (header.querySelector('a.' + target + '-button')) {
 			header.querySelector('a.' + target + '-button').classList.add('current');
 		}
@@ -82,11 +135,6 @@ var MainNav = (function MainNav(el, options) {
 		var target = '';
 		target = this.getAttribute('href');
 		
-		if (currentSection === null) {
-			currentSection = document.querySelector('.error404');
-		}
-
-		currentSection.classList.remove('is-visible', 'is-open');
 
 		
 		var currentLink = header.querySelector('a.current');
@@ -96,39 +144,8 @@ var MainNav = (function MainNav(el, options) {
 		}
 
 		this.classList.add('current');
-		
-		loadSection(target);
-	}
 
-	function loadSection(target) {
-		console.log("loadSection ", target);
-		//	go to home
-		if ( (currentSection && currentSection.classList.contains('home'))) {
-			container.classList.remove('is-home');
-		}
-
-		if (target === '/' || target === './') {
-			target = 'home';
-			container.classList.add('is-home');
-		}
-		
-		if (target === 'projects' && typeof projects === 'undefined') {
-			projects = new Projects();
-		}
-
-		if (target === 'contact' && typeof contact === 'undefined') {
-			contact = new Contact();
-		}
-
-
-		currentSection = document.querySelector('.' + target);
-
-		if (currentSection === null) {
-			currentSection = document.querySelector('.error404');
-		}
-
-		currentSection.classList.add('is-visible', 'is-open');
-		
 		CustomEvent.dispatchEvent('link-click', [target]);
 	}
+
 });

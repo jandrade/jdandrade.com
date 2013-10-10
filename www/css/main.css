@@ -602,31 +602,25 @@ form p {
   		width: 100%;
   	}
 
-  	.project-images {
-  		height: 100%;
-  		left: 0;
-  		overflow: hidden;
-  		position: absolute;
-  		top: 0;
-  		width: 100%;
-  	}
+  	
 
-  		.mask {
-  			width: 400%;
-  		}
-
-  		.project-images img {
-  			float: left;
-  			margin: 0;
-  		}
-
+  		
 /* 3.3. Carousel
    ========================================================================== */
 
 .carousel {
+	background-color: #ddd;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
 	perspective: 1000;
 	-webkit-perspective: 1000;
 }
+
 .carousel .mask {
 	transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -636,6 +630,29 @@ form p {
     -moz-transform: translate3d(0px,0,0px);
     -webkit-transform: translate3d(0px,0,0px);
 }
+
+	.prev-btn,
+	.next-btn {
+		background-color: #ccc;
+		background-color: rgba(150,150,150,0.7);
+		font-size: 3em;
+		padding: 3%;
+		left: 0;
+		position: absolute;
+		top: 42%;
+		z-index: 1;
+	}
+
+	.next-btn {
+		left: auto;
+		right: 0;
+	}
+
+	.carousel img {
+		float: left;
+		margin: 0;
+	}
+
 
 /* ==========================================================================
    4. State

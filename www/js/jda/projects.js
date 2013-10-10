@@ -20,7 +20,7 @@ var Projects = function() {
 		detail = element.querySelector(SETTINGS.detail);
 		closeButton = element.querySelector(SETTINGS.closeButton);
 		infoButton = element.querySelector(SETTINGS.infoButton);
-
+		console.log("NEW Projects///////");
 		window.c = new jda.Carousel('.project-images');
 
 		addEventListeners();
