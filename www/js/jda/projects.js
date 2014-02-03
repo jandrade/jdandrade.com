@@ -21,7 +21,22 @@ var Projects = function() {
 		closeButton = element.querySelector(SETTINGS.closeButton);
 		infoButton = element.querySelector(SETTINGS.infoButton);
 		console.log("NEW Projects///////");
-		window.c = new jda.Carousel('.project-images');
+
+		/*
+		
+		 var carousels = document.querySelectorAll('.project-images'),
+			i = 0,
+			numC = carousels.length;
+		for ( ; i < numC; i++) {
+			window.c = new jda.Carousel(carousels[i]);	
+		}
+
+		*/
+		$('.project-images:eq(0)').jCarousel().hide().delay(500).fadeIn();
+
+		$('.project-images:eq(1), .project-images:eq(2)').jCarousel({
+			time: 2
+		}).hide().delay(500).fadeIn();
 
 		addEventListeners();
 	}());
