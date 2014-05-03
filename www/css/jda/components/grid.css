@@ -1,0 +1,75 @@
+/* 3.2. Grid
+   ========================================================================== */
+.grid {
+    perspective: 1000;
+    -moz-perspective: 1000;
+    -webkit-perspective: 1000;
+    font-size:0;
+    width: 100%;
+}
+
+	.tile {
+		font-size: 1em;
+	    color: #fff;
+	    display: inline-block;
+	    height: 32%;
+	    margin: 0.3%;
+	    width: 24%;
+	    
+	    transition: 0.6s;
+	    -moz-transition: 0.6s;
+	    -webkit-transition: 0.6s;
+	    transform-style: preserve-3d;
+	    -moz-transform-style: preserve-3d;
+	    -webkit-transform-style: preserve-3d;
+
+	    position: relative;
+	}
+
+		.tile a {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+
+			.tile .front:hover {
+				background-color: red;
+			}
+
+		.front, .back {
+		    backface-visibility: hidden;
+		    -webkit-backface-visibility: hidden;
+		    height: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		}
+
+		.front {
+		    background-color: #000;
+		    z-index: 2;
+		}
+
+		.back {
+		   	transform: rotateY(180deg);
+		    -moz-transform: rotateY(180deg);
+		    -webkit-transform: rotateY(180deg);
+		     z-index: 3;
+		}
+
+	.tile.detail {
+		-ms-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+	    -moz-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	    
+	    margin: 0;
+	}
+
+  	.section-content {
+  		height: 100%;
+  		position: relative;
+  		width: 100%;
+  	}

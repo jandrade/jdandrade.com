@@ -1,0 +1,114 @@
+/* 2.4. Projects
+   ========================================================================== */
+.projects {
+	position: relative;
+}
+	
+	.projects img {
+		float: left;
+		margin: 3px;
+	}
+
+	/**
+	 * Info
+	 */
+	.project-info {
+			background-color: rgba(0,0,0,0.8);
+		    box-sizing: border-box;
+		    color: #fff;
+		    font-size: 0.8em;
+		    opacity: 0;
+		    padding: 20px;
+		    position: absolute;
+			right: 2%;
+			text-align: left;
+			top: 0;
+			visibility: hidden;
+			width: 50%;
+		    
+		    transition: all 0.4s linear 1.5s;
+		    -moz-transition: all 0.4s linear 1.5s;
+		    -webkit-transition: all 0.4s linear 1.5s;
+
+		 }
+
+		.back-button {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.detail .back-button {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+		.detail .project-info {
+			opacity: 1;
+		    visibility: visible;
+		    
+		    transition-delay: 0.4s;
+		    -moz-transition-delay: 0.4s;
+		    -webkit-transition-delay: 0.4s;
+		}
+
+		.project-info.is-collapsed {
+			height: 0;
+			width: 0;
+			transition-delay: 0.4s;
+		    -moz-transition-delay: 0.4s;
+		    -webkit-transition-delay: 0.4s;
+		 }
+
+		 .project-info.is-openned {
+		 	height: 80px;
+		 	transition-delay: 0s;
+		    -moz-transition-delay: 0s;
+		    -webkit-transition-delay: 0s;
+		 }
+
+			.is-openned p {
+				opacity: 1;
+				transition: 0.4s 0.4s;
+			    -moz-transition: 0.4s 0.4s;
+			    -webkit-transition: 0.4s 0.4s;
+			}
+  		
+
+			.project-info p {
+				height: auto;
+				margin: 0;
+				opacity: 1;
+			}
+
+			.is-collapsed p {
+				height: 0;
+				opacity: 0;
+				transition: 0.4s 0s;
+			    -moz-transition: 0.4s 0s;
+			    -webkit-transition: 0.4s 0s;
+			
+			}
+  
+  			.project-info .default-button {
+  				position: absolute;
+  				right: 0;
+  				top: 0;
+  			}
+
+  			.project-info .info-button {
+  				display: none;
+  			}
+
+  			.is-collapsed .info-button {
+  				display: block;
+  				right: 0;
+  				top: 0;
+  			}
+
+  			.project-info .close-button {
+  				display: block;
+  			}
+
+  			.is-collapsed .close-button {
+  				display: none;
+  			}

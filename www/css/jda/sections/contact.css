@@ -1,0 +1,12 @@
+/* 2.5. Contact
+   ========================================================================== */
+
+	.contact .contact-box {
+		background-color: #ccc;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.contact .contact-info p {
+		text-align: center;
+	}

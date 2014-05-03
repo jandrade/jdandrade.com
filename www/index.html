@@ -9,10 +9,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <!--
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,700,500' rel='stylesheet' type='text/css'>
-        -->
-        <link rel="stylesheet" href="css/normalize.min.css">
+        
+        <link href='http://fonts.googleapis.com/css?family=Goudy|Raleway' rel='stylesheet' type='text/css'>
+
+        
+        <link rel="stylesheet" href="css/vendor/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -26,25 +27,25 @@
             <header id="header">
                 <nav class="main-nav">
                     <ul>
-                        <li class="page"><a class="about-button" href="about">About</a></li>
-                        <li class="page"><a class="labs-button" href="labs">Labs</a></li>
-                        <li class="logo"><a class="logo-button" href="./"><img src="img/misc/logo.png" alt="Juan David Andrade"></a></li>
-                        <li class="page"><a class="projects-button" href="projects">Projects</a></li>
-                        <li class="page"><a class="contact-button" href="contact">Contact</a></li>
+                        <li class="page"><a class="about-button section-link" href="about">About</a></li>
+                        <li class="page"><a class="labs-button" href="https://medium.com/@juandavid_a82" target="_blank">Blog</a></li>
+                        <li class="logo"><a class="logo-button section-link" href="home" title="Juan David Andrade"></a></li>
+                        <li class="page"><a class="projects-button section-link" href="projects">Projects</a></li>
+                        <li class="page"><a class="contact-button section-link" href="contact">Contact</a></li>
                     </ul>
                 </nav>
             </header><!-- #header -->
 
-            <div class="main-content">
+            <div class="main-content clearfix">
                 <section class="home">
                     <p><strong>Front-end + Back-end Developer</strong><br>
                         Flip your websites into an exciting experience.</p>
                     <nav class="home-nav">
                         <ul>
-                            <li><a class="rotate" href="about">About</a></li>
-                            <li><a class="rotate" href="labs">Labs</a></li>
-                            <li><a class="rotate" href="projects">Projects</a></li>
-                            <li><a class="rotate" href="contact">Contact</a></li>
+                            <li><a class="rotate section-link" href="about">About</a></li>
+                            <li><a class="rotate" href="https://medium.com/@juandavid_a82" target="_blank">Blog</a></li>
+                            <li><a class="rotate section-link" href="projects">Projects</a></li>
+                            <li><a class="rotate section-link" href="contact">Contact</a></li>
                         </ul>
                     </nav>
                 </section><!-- .home -->
@@ -54,6 +55,11 @@
                     <img src="img/misc/me.png" alt="Juan David Andrade">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue felis eros, quis adipiscing eros tincidunt non. Quisque placerat rutrum tortor vitae accumsan.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue felis eros, quis adipiscing eros tincidunt non. Quisque placerat rutrum tortor vitae accumsan.</p>
+                    <div class="row networks">
+                        <div class="col-4"><a class="icon-linkedin" href="http://www.linkedin.com/in/jdandrade" target="_blank"></a></div>
+                        <div class="col-4"><a class="icon-github" href="https://github.com/jandrade" target="_blank"></a></div>
+                        <div class="col-4"><a class="icon-twitter" href="https://twitter.com/juandavid_a82" target="_blank"></a></div>
+                    </div>
                 </section><!-- .about -->
 
                 <section class="projects">
@@ -67,7 +73,7 @@
                             <a class="default-button info-button" href="#">i</a>
                         </div>
 
-                        <div class="project-images carousel">
+                        <!--<div class="project-images carousel">
                             <a href="#" class="prev-btn">&lt;</a>
                             <div class="mask">
                                <img src="img/dummy/carousel_01.png" alt="">
@@ -76,38 +82,50 @@
                                <img src="img/dummy/carousel_04.png" alt="">
                             </div>
                             <a href="#" class="next-btn">&gt;</a>
-                        </div>
+                        </div>-->
                     </div>
                 </section><!-- .projects -->
 
                 <section class="contact">
                     <h1>Contact</h1>
-                    <form class="contact-form">
-                    <p>
-                        <label for="email">Email</label>
-                        <div class="form-field">
-                            <input type="text" name="email" id="email" value="" class="js-required js-email">
-                            <span class="error error-email">Email required</span>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Send a message</p>
+                            <form class="contact-form">
+                                <p>
+                                    <label for="email">Email</label>
+                                    <div class="form-field">
+                                        <input type="text" name="email" id="email" value="" class="js-required js-email">
+                                        <span class="error error-email">Email required</span>
+                                    </div>
+                                </p>
+                                <p>
+                                    <label for="name">Name</label>
+                                    <div class="form-field">
+                                        <input type="text" name="name" id="name" value="" class="js-required">
+                                        <span class="error error-name">Name required</span>
+                                    </div>
+                                </p>
+                                <p>
+                                    <label for="message">Message</label>
+                                    <div class="form-field">
+                                        <textarea name="message" id="message" value="" class="js-required"></textarea>
+                                        <span class="error error-message">Message required</span>
+                                    </div>
+                                </p>
+                                <p class="r-align">
+                                    <button class="submit-button"><i class="icon-mail"></i></button>
+                                </p>
+                            </form>
                         </div>
-                    </p>
-                    <p>
-                        <label for="name">Name</label>
-                        <div class="form-field">
-                            <input type="text" name="name" id="name" value="" class="js-required">
-                            <span class="error error-name">Name required</span>
-                        </div>
-                    </p>
-                    <p>
-                        <label for="message">Message</label>
-                        <div class="form-field">
-                            <textarea name="message" id="message" value="" class="js-required"></textarea>
-                            <span class="error error-message">Message required</span>
-                        </div>
-                    </p>
-                    <p class="r-align">
-                        <button class="submit-button">SEND</button>
-                    </p>
-                    </form>
+                        <aside class="col-4 contact-box">
+                            <img src="img/misc/me-solid.jpg" alt="Juan David Andrade">
+                            <div class="contact-info">
+                                <p><strong>Juan David Andrade</strong></p>
+                                <p>Bogot&aacute;, Colombia.</p>
+                            </div>
+                        </aside>
+                    </div>
                 </section><!-- .contact -->
 
                 <section class="error404">
@@ -117,7 +135,7 @@
 
             </div><!-- .main-content -->
 
-            <footer id="footer">
+            <footer id="footer" class="clearfix">
                 Copyright &copy; 2013 - Juan David Andrade
             </footer><!-- #footer -->
             
@@ -129,11 +147,14 @@
         -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
+        <script src="js/jda/namespace.js"></script>
         <script src="js/jda/utils.js"></script>
-        <script src="js/jda/carousel.js"></script>
-        <script src="js/jda/grid.js"></script>
-        <script src="js/jda/contact.js"></script>
-        <script src="js/jda/projects.js"></script>
+        <script src="js/jda/components/carousel.js"></script>
+        <script src="js/jda/components/grid.js"></script>
+        <script src="js/jda/sections/contact.js"></script>
+        <script src="js/jda/sections/projects.js"></script>
+        <script src="js/jda/sections/navigation.js"></script>
+        <script src="js/jda/app.js"></script>
         <script src="js/main.js"></script>
         <!--
         <script>
