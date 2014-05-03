@@ -87,14 +87,17 @@
 				wrapper: '.mask',
 				items: 'img',
 				prevBtn: '.prev-btn',
-				nextBtn: '.next-btn'
+				nextBtn: '.next-btn',
+				time: 0.5
 			};
 
 		/**
 		 * @construcs jda.Carousel
 		 */
 		(function () {
-			element = document.querySelector(selector);
+			SETTINGS = $.extend(SETTINGS, options);
+			console.log("SETTINGS: ", SETTINGS);
+			element = (typeof selector === 'string') ? document.querySelector(selector) : selector;
 			itemsWrapper = element.querySelector(SETTINGS.wrapper);
 			items = element.querySelectorAll(SETTINGS.items);
 			prevBtn = element.querySelector(SETTINGS.prevBtn);
@@ -201,8 +204,8 @@
 		function startHandler(e) {
 			e.preventDefault();
 			isDragging = true;
-			initialPos = e.clientX;
-			lastPos = e.clientX;
+			initialPos = e.touches ? e.touches[0].pageX : e.clientX;
+			lastPos = initialPos;
 		}
 
 		/**
@@ -216,10 +219,11 @@
 			}
 
 			changeTransition(0);
-			var pos = Utils.getTranslateCoordinate(itemsWrapper.style[Prefixr.transform], 'x');
+			var pos = Utils.getTranslateCoordinate(itemsWrapper.style[Prefixr.transform], 'x'),
+				currentDragPos = e.touches ? e.touches[0].pageX : e.clientX;
 			
-			goTo(pos - lastPos + e.clientX);
-			lastPos = e.clientX;
+			goTo(pos - lastPos + currentDragPos);
+			lastPos = currentDragPos;
 			
 		}
 
@@ -229,15 +233,16 @@
 		 */
 		function endHandler(e) {
 			e.preventDefault();
+			var currentDragPos = e.changedTouches ? e.changedTouches[0].pageX : e.clientX;
 			isDragging = false;
 			
-			changeTransition(0.5);
+			changeTransition(SETTINGS.time);
 
 			// move to next item
-			if (initialPos - e.clientX > 100) {
+			if (initialPos - currentDragPos > 50) {
 				next();
 			// move to prev item
-			} else if (initialPos - e.clientX < -100) {
+			} else if (initialPos - currentDragPos < -50) {
 				prev();
 			// go to current item
 			} else {
@@ -252,15 +257,18 @@
 		function releaseDragging(e) {
 			e.preventDefault();
 			isDragging = false;
-			changeTransition(0.5);
+			changeTransition(SETTINGS.time);
 			goTo(-size*index);
 		}
 		
 		// public methods and properties
-		return {
-			next: next,
-			prev: prev
-		};
+		return element;
+	};
+
+	$.fn.jCarousel = function(options) {
+		return this.each(function(index, item) {
+			return new jda.Carousel(item, options);
+		});
 	};
 
 }(window.jda = window.jda || {}));
