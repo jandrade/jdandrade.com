@@ -22,19 +22,23 @@
 				infoButton: '.info-button',
 				collapsed: 'is-collapsed',
 				openned: 'is-openned'
-			};
+			},
+			PROJECTS_URL = './data/projects.json';
 
 		(function() {
-			gridTest = new jda.GridSwitcher(images);
+			$.get(PROJECTS_URL, init);
+		}());
+
+		function init(data) {
+			gridTest = new jda.GridSwitcher(data);
 			element = document.querySelector(SETTINGS.selector);
 			detail = element.querySelector(SETTINGS.detail);
 			closeButton = element.querySelector(SETTINGS.closeButton);
 			infoButton = element.querySelector(SETTINGS.infoButton);
-			console.log("NEW Projects///////");
 			//window.c = new jda.Carousel('.project-images');
 
 			addEventListeners();
-		}());
+		}
 
 		function addEventListeners() {
 			closeButton.addEventListener(UIEvent.CLICK, closeButton_clickHandler);
@@ -54,18 +58,4 @@
 		}
 	};
 
-	var images = [
-		'img/projects/big/yimino_01.jpg',
-		'img/projects/big/halloween_01.jpg',
-		'img/projects/big/tirefinder_01.jpg',
-		'img/projects/big/guerreros_01.jpg',
-		'img/projects/big/nissancv_01.jpg',
-		'img/projects/big/burnthis_01.jpg',
-		'img/projects/big/superautos_01.jpg',
-		'img/projects/big/calendar_01.jpg',
-		'img/projects/big/pildoras_01.jpg',
-		'img/projects/big/centro_01.jpg',
-		'img/projects/big/toyota_01.jpg',
-		'img/projects/big/01.png'
-	];
 }(window.jda = window.jda || {}, jQuery || $));

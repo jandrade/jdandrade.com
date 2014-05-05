@@ -23,11 +23,20 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-location:before {
+	content: "\e603";
+}
 .icon-mail:before {
 	content: "\e600";
 }
 .icon-paperplane:before {
 	content: "\e601";
+}
+.icon-expand:before {
+	content: "\e605";
+}
+.icon-contract:before {
+	content: "\e607";
 }
 .icon-facebook:before {
 	content: "\e602";

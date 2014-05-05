@@ -1,11 +1,19 @@
 /* 2.3. About
    ========================================================================== */
 
+.about p {
+	margin: 1em 0;
+}
+
 .networks {
 	font-size: 3em;
-	margin: 1em;
+	margin: 0.5em 0;
 }
 
 	.networks a {
 		color: #0099CC;
+	}
+
+	.networks a:hover {
+		color: #2871B2;
 	}

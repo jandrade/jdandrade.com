@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
         
         <link href='http://fonts.googleapis.com/css?family=Goudy|Raleway' rel='stylesheet' type='text/css'>
 
@@ -51,10 +51,9 @@
                 </section><!-- .home -->
 
                 <section class="about">
-                    <h1>About section</h1>
+                    <h1>Juan David Andrade</h1>
                     <img src="img/misc/me.png" alt="Juan David Andrade">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue felis eros, quis adipiscing eros tincidunt non. Quisque placerat rutrum tortor vitae accumsan.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue felis eros, quis adipiscing eros tincidunt non. Quisque placerat rutrum tortor vitae accumsan.</p>
+                    <p>I'm a Web Developer mainly focused in Front-end, with 7+ years of experience in web development, including traditional websites, RIA's and gaming. Front-end lead with experience in small teams management. Multi-skilled developer with knowledge and implementation of coding standards, Web Performance techniques, Object Oriented Programming and design patterns.</p>
                     <div class="row networks">
                         <div class="col-4"><a class="icon-linkedin" href="http://www.linkedin.com/in/jdandrade" target="_blank"></a></div>
                         <div class="col-4"><a class="icon-github" href="https://github.com/jandrade" target="_blank"></a></div>
@@ -65,24 +64,24 @@
                 <section class="projects">
                     <h1>Projects</h1>
                     <div class="section-content">
-                        <ul class="grid"></ul>
+                        <div class="grid"></div>
                         <a class="default-button back-button" href="#">&lt; BACK</a>
-                        <div class="project-info is-openned">
-                            <p>ldfj asdlk fajdsklfjsdlkfsdjflksd fjsldkf jdslk fjdslaf sdjflksd fjdslkf jsdlkfjlkjsdflkds jaflksdjfsld</p>
-                            <a class="default-button close-button" href="#">X</a>
-                            <a class="default-button info-button" href="#">i</a>
-                        </div>
-
-                        <!--<div class="project-images carousel">
-                            <a href="#" class="prev-btn">&lt;</a>
-                            <div class="mask">
-                               <img src="img/dummy/carousel_01.png" alt="">
-                               <img src="img/dummy/carousel_02.png" alt="">
-                               <img src="img/dummy/carousel_03.png" alt="">
-                               <img src="img/dummy/carousel_04.png" alt="">
+                        <div class="project-info">
+                            <div class="project-content">
+                                <h2>Yimino</h2>
+                                <p>Website of Yimino, an electronic band from London.<br>
+                                <ul class="skills">
+                                    <li class="skill">HTML5</li>
+                                    <li class="skill">JS</li>
+                                    <li class="skill">RWD</li>
+                                    <li class="skill">CSS3</li>
+                                </ul>
+                                <a class="link-button visit-button" href="#" target="_blank">View Project</a>
                             </div>
-                            <a href="#" class="next-btn">&gt;</a>
-                        </div>-->
+                            
+                            <a class="default-button icon-contract close-button" href="#"></a>
+                            <a class="default-button icon-expand info-button" href="#"></a>
+                        </div>
                     </div>
                 </section><!-- .projects -->
 
@@ -90,29 +89,29 @@
                     <h1>Contact</h1>
                     <div class="row">
                         <div class="col-8">
-                            <p>Send a message</p>
+                            <h3>Send a message</h3>
                             <form class="contact-form">
-                                <p>
+                                <div class="form-group">
                                     <label for="email">Email</label>
                                     <div class="form-field">
                                         <input type="text" name="email" id="email" value="" class="js-required js-email">
                                         <span class="error error-email">Email required</span>
                                     </div>
-                                </p>
-                                <p>
+                                </div>
+                                <div class="form-group">
                                     <label for="name">Name</label>
                                     <div class="form-field">
                                         <input type="text" name="name" id="name" value="" class="js-required">
                                         <span class="error error-name">Name required</span>
                                     </div>
-                                </p>
-                                <p>
+                                </div>
+                                <div class="form-group">
                                     <label for="message">Message</label>
                                     <div class="form-field">
                                         <textarea name="message" id="message" value="" class="js-required"></textarea>
                                         <span class="error error-message">Message required</span>
                                     </div>
-                                </p>
+                                </div>
                                 <p class="r-align">
                                     <button class="submit-button"><i class="icon-mail"></i></button>
                                 </p>
@@ -121,8 +120,9 @@
                         <aside class="col-4 contact-box">
                             <img src="img/misc/me-solid.jpg" alt="Juan David Andrade">
                             <div class="contact-info">
-                                <p><strong>Juan David Andrade</strong></p>
-                                <p>Bogot&aacute;, Colombia.</p>
+                                <h4>Juan David Andrade</h4>
+                                <p><i class="icon-location"></i> Bogot&aacute;, Colombia.</p>
+                                <p><i class="icon-mail"></i> <a href="mailto:juandavidandrade@gmail.com">juandavidandrade@gmail.com</a></p>
                             </div>
                         </aside>
                     </div>
@@ -142,9 +142,6 @@
         </div><!-- #wrapper -->
 
 
-        <!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/jda/namespace.js"></script>

@@ -55,6 +55,11 @@ ul {
 	padding: 0;
 }
 
+ul,
+li {
+    list-style: none;
+}
+
 img {
     max-width: 100%;
     vertical-align: middle;
@@ -94,7 +99,7 @@ p {
  * Mobile
  * 768px
  */
-@media only screen and (max-width: 48em) {
+@media only screen and (max-width: 47.99em) {
     body {
         font-size: 12px;
         line-height: 1.6em;
@@ -105,6 +110,6 @@ p {
  * Tablet Landscape
  * 1024px
  */
-@media only screen and (min-width: 48.1em) and (max-width: 64em) {
+@media only screen and (min-width: 48em) and (max-width: 64em) {
     
 }

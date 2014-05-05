@@ -34,7 +34,6 @@
 			
 			//	go to home
 			if ( (currentSection && currentSection.classList.contains('home'))) {
-				console.log(currentSection, currentSection.classList.contains('home'))
 				container.classList.remove('is-home');
 			}
 			
@@ -48,7 +47,7 @@
 
 			if (target === '/' || target === 'home') {
 				target = 'home';
-				//container.classList.add('is-home');
+				container.classList.add('is-home');
 			}
 
 			if (target === 'projects' && typeof projects === 'undefined') {

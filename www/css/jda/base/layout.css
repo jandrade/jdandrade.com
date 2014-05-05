@@ -18,7 +18,7 @@
    __________________________________________________________________________ */
 
 .main-content {
-	margin: 1em auto;
+	margin: 2em auto 0 auto;
 	position: relative;
 	width: 94%;
 }
@@ -46,7 +46,6 @@
 
 		section h1 {
 			font-family: 'Raleway', cursive;
-			margin-top: 0;
 			text-transform: uppercase;
 		}
 
@@ -55,6 +54,7 @@
 
 #footer {
 	border-top: 1px solid #ccc;
+	display: none;
 	padding-bottom: 1%;
 	padding-top: 1%;
 	text-align: center;
@@ -73,6 +73,7 @@
 
 .row {
 	clear: both;
+	float: left;
 	width: 100%;
 }
 
@@ -145,7 +146,7 @@
  * 768px
  */
 @media only screen and (max-width: 48em) {
-	#wrapper:before {
+	/*#wrapper:before {
 		background-color: blue;
 		color: white;
 		content: '<768px (mobile)';
@@ -153,17 +154,21 @@
 		position: absolute;
 		top: 0;
 		z-index: 1;
-	}
+	}*/
 
 	#wrapper {
 		margin: 0;
 		width: 100%;
 	}
 
+	.main-content {
+		margin-top: 4em;
+	}
+
 	.col-1,
 	.col-2,
 	.col-3,
-	.col-4,
+	.contact .col-4,
 	.col-5,
 	.col-6,
 	.col-7,
@@ -172,6 +177,7 @@
 	.col-10,
 	.col-11,
 	.col-12 {
+		padding: 0;
 		width: 100%;
 	}
 }
@@ -181,6 +187,7 @@
  * 1024px
  */
 @media only screen and (min-width: 48.1em) and (max-width: 64em) {
+/*
 	#wrapper:before {
 		background-color: red;
 		color: white;
@@ -190,4 +197,5 @@
 		top: 0;
 		z-index: 1;
 	}
+*/
 }

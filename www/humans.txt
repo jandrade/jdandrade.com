@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    <Juan David Andrade> -- <Developer> -- <juandavid_a82>
 
 # TECHNOLOGY COLOPHON
 

@@ -3,10 +3,28 @@
 
 	.contact .contact-box {
 		background-color: #ccc;
-		padding: 10px;
+		padding: 0 0.5em 0.5em;
 		text-align: center;
 	}
 
-	.contact .contact-info p {
-		text-align: center;
+	.contact h3 {
+		margin-top: 0;
 	}
+
+	/**
+	 * Contact form
+	 */
+	.form-group {
+		margin-bottom: 1em;
+	}
+
+	/**
+	 * Contact info
+	 */
+	.contact .contact-info {
+		font-size: 0.86em;
+	}
+
+		.contact .contact-info p {
+			text-align: left;
+		}

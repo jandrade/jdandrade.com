@@ -82,8 +82,12 @@ header {
 			}
 
 			/*  Main navigation > Logo */
+			.is-home .main-nav .logo a {
+				height: 120px;
+			}
 				.logo a {
 					background: transparent url(../../../img/misc/logo-v2.png) no-repeat top center;
+					background-size: contain;
 				    border: none;
 				    display: block;
 				    padding-top: 0;
@@ -117,9 +121,31 @@ header {
 		.is-home .main-nav .page {
 			display: none;
 		}
+
+		.main-nav {
+			padding-left: 15%;
+		}
+
 		/*  Main navigation > Logo */
 		.main-nav .logo {
+			height: 100%;
+			left: 2%;
 			margin: 0;
+			position: absolute;
+			top: 2%;
+			width: 20%;
+		}
+
+			.main-nav .logo a {
+				height: 80px;
+			}
+
+		.is-home .main-nav {
+			padding-left: 0;
+		}
+
+		.is-home .main-nav .logo {
+			position: static;
 			width: 100%;
 		}
 

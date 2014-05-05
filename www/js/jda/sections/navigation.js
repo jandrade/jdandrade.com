@@ -78,5 +78,8 @@
 			CustomEvent.dispatchEvent('link-click', [target]);
 		}
 
+		return {
+			updateSection: updateSection
+		};
 	};
 }(window.jda = window.jda || {}, jQuery || $));

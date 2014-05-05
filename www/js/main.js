@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// load internal section
 	if (window.location.hash) {
 		var target = window.location.hash.replace('#','');
-		console.log("target: ", target);
 		mainApp.load(target);
+		mainNav.updateSection(target);
 	// load default page
 	} else {
 		document.querySelector('.home').classList.add('is-visible');
