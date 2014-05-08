@@ -1,0 +1,174 @@
+/* 2.4. Projects
+   ========================================================================== */
+.projects {
+	position: relative;
+}
+	
+	.projects img {
+		float: left;
+		margin: 3px;
+	}
+
+	/**
+	 * Info
+	 */
+	.project-info {
+		background-color: rgba(0,0,0,0.7);
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    color: #fff;
+	    text-shadow: 0 2px rgba(0,0,0,0.8);
+	    font-size: 0.8em;
+	    opacity: 0;
+	    padding: 1em;
+	    position: absolute;
+		right: 0.5%;
+		text-align: left;
+		top: 0;
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	    -webkit-transition: opacity 0.4s linear 0s;
+	    -moz-transition: opacity 0.4s linear 0s;
+	    -o-transition: opacity 0.4s linear 0s;
+	    transition: opacity 0.4s linear 0s;
+	 }
+
+		.back-button {
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: -4em;
+			visibility: hidden;
+			z-index: 1;
+		}
+
+			.detail .back-button {
+				opacity: 1;
+				visibility: visible;
+			}
+
+		.detail .project-info {
+			opacity: 1;
+		    visibility: visible;
+		    height: auto;
+		    width: 99.5%;
+		    -webkit-transition-delay: 1.5s;
+		    -moz-transition-delay: 1.5s;
+		    -o-transition-delay: 1.5s;
+		    transition-delay: 1.5s;
+		}
+
+		.project-info.is-collapsed {
+			height: 0;
+			width: 0;
+			
+		}
+
+		 .project-info.is-openned {
+		 	height: auto;
+		 	width: 99.6%;
+		}
+
+			.project-content {
+				display: none;
+			}
+
+			.detail .project-content {
+				display: block;
+			}
+
+			.project-info .project-content {
+				visibility: visible;
+				height: 0;
+				line-height: 1.2em;
+				margin: 0;
+				opacity: 1;
+				-webkit-transition: opacity 0.5s ease-in-out,  visibility 0s linear 0.5s;
+				-moz-transition: opacity 0.5s ease-in-out,  visibility 0s linear 0.5s;
+				-o-transition: opacity 0.5s ease-in-out,  visibility 0s linear 0.5s;
+				transition: opacity 0.5s ease-in-out,  visibility 0s linear 0.5s;
+			}
+
+			.is-collapsed .project-content {
+				display: none;
+				visibility: hidden;
+				opacity: 0;
+				-webkit-transition-delay: 0s;
+				-moz-transition-delay: 0s;
+				-o-transition-delay: 0s;
+				transition-delay: 0s;
+			}
+
+			.is-openned .project-content {
+				width: 100%;
+				height: auto;
+				opacity: 1;
+				-webkit-transition-delay: 0s;
+				-moz-transition-delay: 0s;
+				-o-transition-delay: 0s;
+				transition-delay: 0s;
+			}
+  
+  			.project-info .default-button {
+  				position: absolute;
+  				right: 0;
+  				top: 0;
+  			}
+
+  			.info-button {
+  				background-color: #0099CC;
+  			}
+
+  				.info-button:hover {
+  					background-color: #2871B2;
+  				}
+
+  			.project-info .info-button {
+  				display: none;
+  			}
+
+  			.is-collapsed .info-button {
+  				display: block;
+  				right: 0;
+  				top: 0;
+  			}
+
+  			.project-info .close-button {
+  				display: block;
+  			}
+
+  			.is-collapsed .close-button {
+  				display: none;
+  			}
+
+  		/**
+  		 * Skills
+  		 */
+  		.skill {
+  			color: #fff;
+  			border: 1px solid #0099CC;
+  			display: inline-block;
+  			line-height: 2em;
+  			margin: 0 0.2em;
+  			padding: 0 0.5em;
+  			-webkit-box-shadow: 0 1px rgba(0,0,0,0.3);
+  			box-shadow: 0 1px rgba(0,0,0,0.3);
+  		}
+
+  		.visit-button {
+  			font-family: 'Raleway', sans-serif;
+  			margin: 1em 0 0;
+  			float: right;
+  		}
+
+/**
+ * Mobile
+ * 768px
+ */
+@media only screen and (max-width: 48em) {
+	.back-button {
+		top: -3em;
+	}
+}

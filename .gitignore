@@ -1,6 +1,7 @@
 # @see https://github.com/github/gitignore
 
 node_modules
+public/
 
 # OS generated files #
 ######################

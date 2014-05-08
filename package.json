@@ -1,0 +1,36 @@
+{
+  "name": "jda",
+  "version": "1.0.0",
+  "author": "Juan David Andrade <juan.andrade@zemoga.com>",
+  "description": "Personal Website",
+  "homepage": "https://github.com/jandrade/jdandrade.com",
+  "keywords": [
+    "Website"
+  ],
+  "contributors": [
+    {
+      "name": "Juan David Andrade",
+      "email": "juan.andrade@zemoga.com"
+    }
+  ],
+  "bugs": "https://github.com/jandrade/jdandrade.com/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jandrade/jdandrade.com.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-targethtml": "~0.2.6",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-text-replace": "~0.3.9"
+  },
+  "bundledDependencies": [],
+  "license": "MIT"
+}

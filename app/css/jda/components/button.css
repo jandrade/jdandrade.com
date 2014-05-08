@@ -1,0 +1,51 @@
+.default-button {
+	background-color: #7B2D30;
+	color: #fff;
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+	line-height: 2em;
+	text-align: center;
+	padding: 0 0.5em;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+	.default-button:hover {
+		background-color: #9D2D30;
+	}
+
+.link-button {
+	background-color: #2871B2;
+	border: 1px solid #0650A1;
+	color: #fff;
+	display: inline-block;
+	font-weight: normal;
+	line-height: 2em;
+	padding: 0 0.5em;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	
+}
+
+	.link-button:hover {
+		background-color: #0099CC;
+	}
+
+	.link-button:after {
+		content: ' >';
+	}
+
+.back-button {
+	background-color: #0099CC;
+	font-size: 1em;
+}
+
+	.back-button:hover {
+		background-color: #2871B2;
+	}
+
