@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+If you are seeing the source code, this page have a concatenated version of styles and scripts.
+To see the source code, you can go to my public repository on github:
+
+https://github.com/jandrade/jdandrade.com
+
+Thanks!
+Juan David Andrade
+-->
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,9 +15,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Juan David Andrade</title>
         <meta name="description" content="Personal Portfolio of Juan David Andrade">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         
         <link href='http://fonts.googleapis.com/css?family=Goudy|Raleway' rel='stylesheet' type='text/css'>
 
@@ -56,7 +68,9 @@
 
                 <section class="about">
                     <h1>Juan David Andrade</h1>
-                    <img src="img/misc/me.png" alt="Juan David Andrade">
+                    <div class="avatar">
+                        <img src="img/misc/me.jpg" alt="Juan David Andrade">
+                    </div>
                     <p>Web Developer mainly focused in Front-end Development, with 7+ years of experience in web development, including traditional websites, RIA's, components and gaming. Front-end lead with experience in small teams management. Multi-skilled developer with knowledge and implementation of coding standards, Web Performance techniques, Object Oriented Programming and design patterns.</p>
                     <p>I have worked on multiple projects for clients such as Rollingstone, Disney, Nissan, HBO, Toyota, Autodesk, Scion, Sears and Delta. </p>
                     <div class="row networks">
@@ -70,7 +84,7 @@
                     <h1>Projects</h1>
                     <div class="section-content">
                         <div class="grid"></div>
-                        <a class="default-button back-button" href="#">&lt; BACK</a>
+                        <a class="default-button back-button" title="Return to projects grid" href="#">&lt; BACK</a>
                         <div class="project-info">
                             <div class="project-content">
                                 <h2>Yimino</h2>
@@ -81,11 +95,11 @@
                                     <li class="skill">RWD</li>
                                     <li class="skill">CSS3</li>
                                 </ul>
-                                <a class="link-button visit-button" href="#" target="_blank">View Project</a>
+                                <a class="link-button visit-button" href="#" target="_blank" title="Go to project website">View Project</a>
                             </div>
                             
-                            <a class="default-button icon-minus close-button" href="#"></a>
-                            <a class="default-button icon-plus info-button" href="#"></a>
+                            <a class="default-button icon-minus close-button" title="Click to hide description" href="#"></a>
+                            <a class="default-button icon-plus info-button" title="Click to show description" href="#"></a>
                         </div>
                     </div>
                 </section><!-- .projects -->
@@ -118,14 +132,17 @@
                                     </div>
                                 </div>
                                 <p class="r-align">
-                                    <button class="submit-button"><i class="icon-mail"></i></button>
+                                    <button class="submit-button" title="Send me a message"><i class="icon-mail"></i></button>
                                 </p>
                             </form>
                         </div>
                         <aside class="col-4 contact-box">
                             <img src="img/misc/me-solid.jpg" alt="Juan David Andrade">
                             <div class="contact-info">
-                                <h4>Juan David Andrade</h4>
+                                <h4>
+                                    Juan David Andrade<br>
+                                    <small>Front End Developer</small>
+                                </h4>
                                 <p><i class="icon-location"></i> <a href="https://www.google.com/maps/place/Bogot%C3%A1,+Bogota/@4.283435,-74.22404,9z/data=!3m1!4b1!4m2!3m1!1s0x8e3f9bfd2da6cb29:0x239d635520a33914" target="_blank">Bogot&aacute;, Colombia.</a></p>
                                 <p><i class="icon-mail"></i> <a href="mailto:juandavidandrade@gmail.com">juandavidandrade@gmail.com</a></p>
                             </div>
@@ -154,9 +171,11 @@
         <script src="js/jda/utils.js"></script>
         <script src="js/jda/components/carousel.js"></script>
         <script src="js/jda/components/grid.js"></script>
+        <script src="js/jda/sections/home.js"></script>
         <script src="js/jda/sections/contact.js"></script>
         <script src="js/jda/sections/projects.js"></script>
         <script src="js/jda/sections/navigation.js"></script>
+        <script src="js/jda/router.js"></script>
         <script src="js/jda/app.js"></script>
         <script src="js/main.js"></script>
         <!--<!(endif)-->

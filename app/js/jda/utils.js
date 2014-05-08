@@ -70,11 +70,11 @@ if (!Array.prototype.shuffle) {
  * @class
  *
  * @example
- * CustomEvent.addEventListener('custom_type', fnCallback);
- * CustomEvent.removeEventListener('custom_type', fnCallback);
- * CustomEvent.dispatchEvent('custom_type', [{'message': 'value'}]);
+ * AppEvent.addEventListener('custom_type', fnCallback);
+ * AppEvent.removeEventListener('custom_type', fnCallback);
+ * AppEvent.dispatchEvent('custom_type', [{'message': 'value'}]);
  */
-window.CustomEvent = (function ExportsEvent() {
+window.AppEvent = (function ExportsEvent() {
 
 	var _eventCallbacks = {};
 

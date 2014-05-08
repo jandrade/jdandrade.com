@@ -23,9 +23,12 @@ module.exports = function(grunt) {
 					'<%= app %>/js/<%= pkg.name %>/utils.js',
 					'<%= app %>/js/<%= pkg.name %>/components/carousel.js',
 					'<%= app %>/js/<%= pkg.name %>/components/grid.js',
+					'<%= app %>/js/<%= pkg.name %>/sections/home.js',
 					'<%= app %>/js/<%= pkg.name %>/sections/contact.js',
 					'<%= app %>/js/<%= pkg.name %>/sections/projects.js',
 					'<%= app %>/js/<%= pkg.name %>/sections/navigation.js',
+					'<%= app %>/js/<%= pkg.name %>/router.js',
+					'<%= app %>/js/<%= pkg.name %>/app.js',
 					'<%= app %>/js/main.js'
 					],
 				dest: '<%= public %>/js/<%= pkg.name %>.js'
@@ -53,7 +56,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: '<%= app %>/',
-						src: ['fonts/**', 'css/vendor/**', 'data'],
+						src: ['fonts/**', 'css/vendor/**', 'data/**'],
 						dest: '<%= public %>/'
 					},
 					// js

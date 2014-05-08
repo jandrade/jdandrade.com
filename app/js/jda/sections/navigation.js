@@ -45,7 +45,7 @@
 				links[i].addEventListener(UIEvent.CLICK, links_clickHandler);
 			}
 
-			CustomEvent.addEventListener('link-click', updateSection);
+			AppEvent.addEventListener('link-click', updateSection);
 		}
 
 		/**
@@ -78,7 +78,7 @@
 
 			e.target.classList.add('current');
 
-			CustomEvent.dispatchEvent('link-click', [target]);
+			AppEvent.dispatchEvent('link-click', [target]);
 		}
 
 		return {
