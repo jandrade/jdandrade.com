@@ -56,10 +56,10 @@
 	"skills": ["PHP", "MySQL", "HTML", "Javascript", "CSS", "Flash", "Actionscript 2"]
 },{
 	"id": 11,
-	"name": "BiteJS Slider",
+	"name": "BiteJS Carousel",
 	"image": "img/projects/big/sliderjs_01.jpg",
 	"description": "A lightweight and flexible carousel/slider. It is a javascript component built using raw javascript, to avoid library dependencies. The component supports css3 transitions, infinite navigation, responsive behaviours and other stuff.",
-	"url": "http://jandrade.github.io/sliderjs/",
+	"url": "http://jandrade.github.io/carousel/",
 	"skills": ["HTML", "Javascript", "CSS3", "Responsive Web Design", "Adaptive Component", "Library", "Open Source", "Github"]
 },{
 	"id": 9,
