@@ -2,6 +2,7 @@
 
 node_modules
 public/
+dploy.yaml
 
 # OS generated files #
 ######################
