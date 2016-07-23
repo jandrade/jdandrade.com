@@ -1,0 +1,20 @@
+@import "settings/variables.css";
+@import "core/base.css";
+@import "core/typography.css";
+@import "modules/header.css";
+
+.block {
+  background-color: #ff9;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+  width: calc(100% - var(--font-size));
+
+  &__title {
+    background-color: #9ff;
+  }
+
+  &--active {
+    background-color: #f9f;
+  }
+}

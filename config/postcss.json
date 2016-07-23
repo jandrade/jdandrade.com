@@ -1,0 +1,16 @@
+{
+  "use": [
+    "stylelint",
+    "postcss-import",
+    "postcss-cssnext",
+    "css-mqpacker"
+  ],
+  "input": "src/styles/main.css",
+  "output": "public/styles/built.css",
+  "autoprefixer": {
+    "browsers": ["last 2 versions"]
+  },
+  "map": true,
+  "warnForDuplicates": false,
+  "watch": true
+}

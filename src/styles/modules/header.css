@@ -1,0 +1,12 @@
+.header {
+  padding: 1em;
+  text-align: center;
+
+  &__title {
+    font-size: 2em;
+  }
+
+  @media (--small-viewport) {
+    width: 50%;
+  }
+}

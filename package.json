@@ -1,8 +1,12 @@
 {
   "name": "jda",
-  "version": "1.0.0",
-  "author": "Juan David Andrade <juan.andrade@zemoga.com>",
+  "version": "2.0.0",
+  "author": "Juan David Andrade <juandavidandrade@gmail.com>",
   "description": "Personal Website",
+  "scripts": {
+    "css": "postcss -c config/postcss.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "homepage": "https://github.com/jandrade/jdandrade.com",
   "keywords": [
     "Website"
@@ -10,7 +14,7 @@
   "contributors": [
     {
       "name": "Juan David Andrade",
-      "email": "juan.andrade@zemoga.com"
+      "email": "juandavidandrade@gmail.com"
     }
   ],
   "bugs": "https://github.com/jandrade/jdandrade.com/issues",
@@ -20,16 +24,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-targethtml": "~0.2.6",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-contrib-imagemin": "~0.3.0",
-    "grunt-text-replace": "~0.3.9"
+    "css-mqpacker": "5.0.1",
+    "cssnano": "3.7.3",
+    "postcss": "5.1.0",
+    "postcss-cli": "2.5.2",
+    "postcss-cssnext": "2.7.0",
+    "postcss-import": "8.1.2",
+    "stylelint": "7.0.3",
+    "stylelint-config-standard": "11.0.0"
   },
   "bundledDependencies": [],
   "license": "MIT"
