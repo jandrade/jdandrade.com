@@ -10,6 +10,9 @@
   "autoprefixer": {
     "browsers": ["last 2 versions"]
   },
+  "stylelint": {
+    "color": true
+  },
   "map": true,
   "warnForDuplicates": false,
   "watch": true

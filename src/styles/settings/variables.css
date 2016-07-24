@@ -5,10 +5,16 @@
   --font-size-sm: 14px;
 
   /**
+   * Fonts
+   */
+  --font-primary: 'Lato', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Libre Franklin', sans-serif;
+
+  /**
    * Colors Palette
    */
   --color-white: #fff;
-  --color-lighter: #fafafa;
+  --color-lighter: #f2f2f2;
   --color-light: #c6c4c0;
   --color-dark: #737373;
   --color-primary: #287bb6;

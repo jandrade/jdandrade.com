@@ -1,24 +1,24 @@
+/**
+ * Configuration
+ */
 @import "settings/variables.css";
+
+/**
+ * Core styles
+ */
 @import "core/base.css";
 @import "core/layout.css";
 @import "core/typography.css";
+
+/**
+ * Base elements
+ */
 @import "elements/button.css";
 @import "elements/tags.css";
+
+/**
+ * Modules / components
+ */
 @import "modules/header.css";
 @import "modules/project.css";
-
-.block {
-  background-color: #ff9;
-  margin: 0 auto;
-  padding: 1em;
-  text-align: center;
-  width: calc(100% - var(--font-size));
-
-  &__title {
-    background-color: #9ff;
-  }
-
-  &--active {
-    background-color: #f9f;
-  }
-}
+@import "modules/section.css";

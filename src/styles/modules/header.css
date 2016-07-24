@@ -1,14 +1,40 @@
 .header {
   background-color: var(--color-light);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  padding: 1em;
-  text-align: center;
+  padding: 1.5em 0;
+  position: relative;
+
+  & .container {
+    align-items: baseline;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  &__logo {
+    background-color: var(--color-light);
+    border-radius: 50%;
+    margin-left: -1.25em;
+    padding: 1.25em;
+    position: absolute;
+    bottom: -1.75em;
+
+    & img {
+      width: 100px;
+
+      @media (--small-viewport) {
+        width: 84px;
+      }
+    }
+  }
 
   &__title {
     font-size: 1.5em;
-  }
+    margin-left: 5em;
+    margin-bottom: -1em;
+    width: 4em;
 
-  @media (--small-viewport) {
-    padding: 0.5em;
+    @media (--small-viewport) {
+      margin-left: 5em;
+    }
   }
 }

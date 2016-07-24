@@ -1,6 +1,7 @@
 .tag {
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.8725em;
   list-style-type: none;
   padding: 0;
 

@@ -1,0 +1,35 @@
+.section {
+  &__title {
+    border-bottom: 1px solid var(--color-primary);
+    margin-bottom: 1em;
+    padding-bottom: 0.25em;
+    position: relative;
+    text-align: center;
+
+    &::after,
+    &::before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-color: rgba(0, 0, 0, 0);
+      border-top-color: var(--color-lighter);
+      border-width: 16px;
+      margin-left: -16px;
+    }
+
+    &::before {
+      border-color: rgba(0, 0, 0, 0);
+      border-top-color: var(--color-primary);
+      border-width: 17px;
+      margin-left: -17px;
+    }
+  }
+}
