@@ -1,0 +1,10 @@
+.button {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-white);
+  padding: 0.5em 1em;
+
+  &:hover {
+    background-color: color(var(--color-primary) blackness(20%));
+  }
+}

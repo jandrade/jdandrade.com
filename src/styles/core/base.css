@@ -4,26 +4,10 @@ html {
 }
 
 body {
-  background-color: var(--color-light);
+  background-color: var(--color-lighter);
   color: var(--color-dark);
-  font-family: 'Raleway', sans-serif;
-  margin: 1em;
+  margin: 0;
   padding: 0;
-}
-
-@media (--small-viewport) {
-  body {
-    font-size: var(--font-size);
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Lato', sans-serif;
 }
 
 *,
@@ -33,10 +17,14 @@ h6 {
 }
 
 a {
-  color: var(--color-blue);
+  color: var(--color-primary);
   text-decoration: none;
 
   &:hover {
     text-decoration: none;
   }
+}
+
+figure {
+  margin: 0;
 }

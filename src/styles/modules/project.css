@@ -1,0 +1,44 @@
+.project {
+  border-bottom: 1px solid color(var(--color-primary) alpha(20%));
+  margin-bottom: 2em;
+
+  &__header {
+    display: flex;
+    padding: 1em 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  & .button {
+    margin-left: auto;
+  }
+
+  /**
+   * element: picture
+   * .project__picture
+   */
+  &__picture {
+    /* box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4); */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    max-height: 200px;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.6);
+    }
+
+    /**
+     * Selected picture
+     */
+    &:target {
+      max-height: 1000px;
+    }
+  }
+
+  & img {
+    width: 100%;
+  }
+}

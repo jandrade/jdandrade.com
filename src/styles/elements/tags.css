@@ -1,0 +1,13 @@
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+
+  &__item {
+    background-color: var(--color-light);
+    display: inline-block;
+    margin: 0.25em;
+    padding: 0.25em 0.5em;
+  }
+}

@@ -2,14 +2,16 @@
  * Default settings
  */
 :root {
-  --font-size: 20px;
+  --font-size-sm: 14px;
 
   /**
    * Colors Palette
    */
+  --color-white: #fff;
+  --color-lighter: #fafafa;
   --color-light: #c6c4c0;
   --color-dark: #737373;
-  --color-blue: #287bb6;
+  --color-primary: #287bb6;
 }
 
 /**

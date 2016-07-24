@@ -1,7 +1,11 @@
 @import "settings/variables.css";
 @import "core/base.css";
+@import "core/layout.css";
 @import "core/typography.css";
+@import "elements/button.css";
+@import "elements/tags.css";
 @import "modules/header.css";
+@import "modules/project.css";
 
 .block {
   background-color: #ff9;
