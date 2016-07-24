@@ -19,6 +19,7 @@
 /**
  * Modules / components
  */
+@import "modules/footer.css";
 @import "modules/header.css";
 @import "modules/project.css";
 @import "modules/section.css";

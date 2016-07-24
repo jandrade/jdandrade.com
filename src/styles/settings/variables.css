@@ -2,13 +2,14 @@
  * Default settings
  */
 :root {
-  --font-size-sm: 14px;
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
 
   /**
    * Fonts
    */
   --font-primary: 'Lato', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-  --font-secondary: 'Libre Franklin', sans-serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
 
   /**
    * Colors Palette
@@ -17,6 +18,7 @@
   --color-lighter: #f2f2f2;
   --color-light: #c6c4c0;
   --color-dark: #737373;
+  --color-darker: #5d5a58;
   --color-primary: #287bb6;
 }
 
