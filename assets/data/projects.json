@@ -1,0 +1,86 @@
+[{
+	"id": 1,
+	"name": "In the Belly of the Beast",
+	"image": "assets/img/projects/big/rollingstone_01.jpg",
+	"description": "The Rolling Stone feature article 'In the Belly of the Beast' is an adaptive experience across all devices. It was developed using modern HTML5 features as Video API, Audio API, CSS3 Transitions. I was in charge of the Technical Architecture and Front End Development of some components.",
+	"url": "http://www.rollingstone.com/feature/belly-beast-meat-factory-farms-animal-activists",
+	"skills": ["Front End Architecture", "HTML5", "Video", "Responsive Web Design", "Javascript", "css3"]
+},{
+	"id": 2,
+	"name": "The Alternative Fuel Debate",
+	"image": "assets/img/projects/big/tft_01.jpg",
+	"description": "The alternative fuel debate is a real-time component that shows tweets written by scientists, policy makers and experts in the Fuel industry. I developed the interactions of the circles, using a physics engine (box2D) to handle the collisions between each category and display and smooth and interactive experience.",
+	"url": "http://www.thedailybeast.com/features/alternative-fuel-debate.html",
+	"skills": ["Flash", "Actionscript 3", "Box2D"]
+},{
+	"id": 3,
+	"name": "Gerber Virtual Agent",
+	"image": "assets/img/projects/big/gerber_01.jpg",
+	"description": "The Virtual Agent is an interactive experience to help customers to select and build insurance quotes through a customized form. It was developed creating custom components (dropdowns, input fields) and using CSS3 Transitions, a Video Player built from scratch and some other cool components.",
+	"url": "https://www.gerberlife.com/gl/view/guide_products/term/index.jsp#/quote/virtualAgent",
+	"skills": ["Javascript", "HTML5", "Responsive Web Design", "css3", "Google Analytics"]
+},{
+	"id": 8,
+	"name": "Rolling Pills",
+	"image": "assets/img/projects/big/pildoras_01.jpg",
+	"description": "Development of a Casual Racing Game. Within the game, the user should go to a factory to collect pills and deliver them into a town using a car to transport them. This was built for 'Concurso Red 100 - El Tiempo'.",
+	"url": "#",
+	"skills": ["HTML5", "Javascript", "CSS3", "Responsive Web Design"]
+},{
+	"id": 5,
+	"name": "Sears Tire Finder",
+	"image": "assets/img/projects/big/tirefinder_01.jpg",
+	"description": "Development of a Rich Internet Application (RIA) to find and select tires inside sears.com. The experience asks users some questions about his car. The purpose of the tool is to display a list of the best available tires for the customer.",
+	"url": "http://www.sears.com/shc/s/nb_10153_12605_NB_Tire+Advisor",
+	"skills": ["Flex", "Actionscript 3", "API", "Web Services"]
+},{
+	"id": 6,
+	"name": "Centro",
+	"image": "assets/img/projects/big/centro_01.jpg",
+	"description": "Front End Development for the website of Centro Agency.",
+	"url": "http://centro.net",
+	"skills": ["HTML5", "Javascript", "CSS"]
+},{
+	"id": 7,
+	"name": "Indutecnicas de Colombia",
+	"image": "assets/img/projects/big/idc_01.jpg",
+	"description": "This is the website for 'Indutecnicas de Colombia', a workshop that offers metalmechanic and industrial services in Bogot&aacute;. It is being developed as an adaptive experience to be supported in all devices, using javascript and RWD techniques (fluid layout, adaptive images and media queries).",
+	"url": "http://stage.indutecnicasdecolombia.com/",
+	"skills": ["HTML5", "Javascript", "CSS3", "Responsive Web Design"]
+},{
+	"id": 12,
+	"name": "Yimino",
+	"image": "assets/img/projects/big/yimino_01.jpg",
+	"description": "Website of Yimino, an electronic band from London. I developed the website and the CMS behind the site.",
+	"url": "http://www.yimino.com",
+	"skills": ["PHP", "MySQL", "HTML", "Javascript", "CSS", "Flash", "Actionscript 2"]
+},{
+	"id": 11,
+	"name": "BiteJS Carousel",
+	"image": "assets/img/projects/big/sliderjs_01.jpg",
+	"description": "A lightweight and flexible carousel/slider. It is a javascript component built using raw javascript, to avoid library dependencies. The component supports css3 transitions, infinite navigation, responsive behaviours and other stuff.",
+	"url": "http://jandrade.github.io/carouseljs/",
+	"skills": ["HTML", "Javascript", "CSS3", "Responsive Web Design", "Adaptive Component", "Library", "Open Source", "Github"]
+},{
+	"id": 9,
+	"name": "Toyota Avalon Experience",
+	"image": "assets/img/projects/big/toyota_01.jpg",
+	"description": "Front End Development of Toyota Avalon 2013. The front end was built as a custom theme for wordpress and supported with javascript and css.",
+	"url": "http://toyota.com/avalonexperience/",
+	"skills": ["HTML5", "Javascript", "CSS3", "Responsive Web Design"]
+},{
+	"id": 4,
+	"name": "A&ntilde;o Viejo",
+	"image": "assets/img/projects/big/burnthis_01.jpg",
+	"description": "Development of the first virtual 'A&ntilde;o Viejo'. I developed the X-Ray Vision where the objects to be burn and to be kept are shown (links, texts, images, tweets).",
+	"url": "#",
+	"skills": ["Flash", "Actionscript 3"]
+},{
+	"id": 10,
+	"name": "Nissan Van Visualizer",
+	"image": "assets/img/projects/big/nissancv_01.jpg",
+	"description": "Front End Architecture and Development of a Vehicle configurator using HTML5 Canvas to have a rich and interactive experience. The configurator supports drag and drop of accessories, undo, redo, restart, 4 different cameras to bring a fully customizable experience.",
+	"url": "http://www.nissancommercialvehicles.com/#vanVis",
+	"skills": ["HTML5", "Canvas", "Javascript", "CSS3", "Responsive Web Design"]
+}
+]
