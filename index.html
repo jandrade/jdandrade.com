@@ -6,40 +6,47 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>Juan David Andrade</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Libre+Franklin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Libre+Franklin:300,400" rel="stylesheet">
 
     <!--link rel="stylesheet" href="http://basehold.it/23"-->
     <link rel="stylesheet" href="styles/built.css"></link>
   </head>
   <body>
     <header class="header">
-      <img src="assets/img/misc/logo.svg" alt="Juan David Andrade">
-      <h1 class="header__title">Juan David Andrade</h1>
+      <div class="container">
+        <div class="header__logo">
+          <img src="assets/img/misc/logo.svg" alt="Juan David Andrade">
+        </div>
+        <h1 class="header__title">Juan David Andrade</h1>
+      </div>
     </header>
 
     <main class="main container">
-      <section class="tile me">
-        <a href="#me" class="tile__name"><h2>About</h2></a>
+      <section class="section me">
+        <a href="#me">
+          <h2 class="section__title">About</h2>
+        </a>
         <div class="content">
-          <p>Front-End Architect, with 9+ years of experience in web and mobile development, including traditional websites, SPAs, and gaming. Team Leader with experience managing small and medium-sized teams (+20). Multi-skilled developer with knowledge and implementation of coding standards, Web Performance techniques, Object Oriented Programming, Unit Testing and design patterns.</p>
+          <p><strong>Front End Architect</strong>, with <strong>9+ years</strong> of experience in web and mobile development, including traditional websites, SPAs, and gaming. <strong>Team Lead</strong> with experience managing <strong>small and medium-sized teams (+20)</strong>. <strong>Multi-skilled</strong> developer with knowledge and implementation of coding standards, Web Performance techniques, Object Oriented Programming, Unit Testing and design patterns.</p>
 
           <p>I have worked on multiple projects for clients such as RollingStone, Disney, Nissan, HBO, Toyota, Autodesk, Scion, Sears and Delta.</p>
+
+          <p>I have worked with multiple digital agencies as <strong>Huge Inc.</strong>, <strong>ZemoGA Inc.</strong>, and Startups as <strong>torre</strong> and <strong>Flow Kana</strong>.</p>
         </div>
       </section>
-      <section class="tile dev">
-        <a href="#dev" class="tile__name">
-          <h2>Projects</h2>
+      <section class="section projects">
+        <a href="#projects">
+          <h2 class="section__title">Projects</h2>
         </a>
         <div class="items">
-
-          <article class="project">
+          <article class="project" id="rs-in-the-belly">
             <header class="project__header">
               <h3 class="project__title">In the Belly of the Beast</h3>
               <a class="button"
               target="_blank" href="http://www.rollingstone.com/feature/belly-beast-meat-factory-farms-animal-activists">View project</a>
             </header>
             <a href="#rs-in-the-belly">
-              <figure class="project__picture" id="rs-in-the-belly">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/rollingstone_01.jpg" alt="">
               </figure>
             </a>
@@ -54,12 +61,12 @@
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project" id="alternative-fuel-debate">
             <header class="project__header">
               <h3 class="project__title">The Alternative Fuel Debate</h3>
             </header>
             <a href="#alternative-fuel-debate">
-              <figure class="project__picture" id="alternative-fuel-debate">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/tft_01.jpg" alt="">
               </figure>
             </a>
@@ -71,14 +78,14 @@
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project" id="gerber-virtual-agent">
             <header class="project__header">
-              <h3 class="project__title">Gerber Virtual Agent</h3>
+              <h3 class="project__title">Virtual Agent</h3>
               <a class="button"
               target="_blank" href="https://www.gerberlife.com/gl/view/guide_products/term/index.jsp#/quote/virtualAgent">View project</a>
             </header>
             <a href="#gerber-virtual-agent">
-              <figure class="project__picture" id="gerber-virtual-agent">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/gerber_01.jpg" alt="Gerber Virtual Agent">
               </figure>
             </a>
@@ -92,14 +99,14 @@
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project" id="indutecnicas">
             <header class="project__header">
               <h3 class="project__title">Indutecnicas de Colombia</h3>
               <a class="button"
               target="_blank" href="http://indutecnicasdecolombia.com">View project</a>
             </header>
             <a href="#indutecnicas">
-              <figure class="project__picture" id="indutecnicas">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/idc_01.jpg" alt="">
               </figure>
             </a>
@@ -112,14 +119,14 @@
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project" id="carousel">
             <header class="project__header">
               <h3 class="project__title">BiteJS Carousel</h3>
               <a class="button"
               target="_blank" href="http://jandrade.github.io/carouseljs/">View project</a>
             </header>
             <a href="#carousel">
-              <figure class="project__picture" id="carousel">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/sliderjs_01.jpg" alt="">
               </figure>
             </a>
@@ -133,14 +140,14 @@
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project" id="van-visualizer">
             <header class="project__header">
               <h3 class="project__title">Nissan Van Visualizer</h3>
               <a class="button"
               target="_blank" href="http://www.nissancommercialvehicles.com/#vanVis">View project</a>
             </header>
             <a href="#van-visualizer">
-              <figure class="project__picture" id="van-visualizer">
+              <figure class="project__picture">
                 <img src="assets/img/projects/big/nissancv_01.jpg" alt="">
               </figure>
             </a>
@@ -156,5 +163,9 @@
         </div>
       </section>
     </main>
+
+    <footer class="container">
+      <p class="right">2016 &copy; Juan David Andrade</p>
+    </footer>
   </body>
 </html>
