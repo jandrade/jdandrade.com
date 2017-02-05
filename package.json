@@ -4,12 +4,14 @@
   "author": "Juan David Andrade <juandavidandrade@gmail.com>",
   "description": "Personal Website",
   "scripts": {
+    "build": "npm run css",
     "css": "postcss -c config/postcss.json",
     "deploy": "git push origin `git subtree split --prefix public development`:gh-pages --force"
   },
   "homepage": "https://github.com/jandrade/jdandrade.com",
   "keywords": [
-    "Website"
+    "Website",
+    "PostCSS"
   ],
   "contributors": [
     {
