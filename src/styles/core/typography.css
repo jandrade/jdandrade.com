@@ -23,21 +23,32 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 
 p {
+  line-height: 1.8;
   margin-bottom: 1.3em;
   text-align: justify;
 }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin: 1.414em 0 0.5em;
   font-weight: inherit;
   line-height: 1.2;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 h1 {
@@ -54,7 +65,13 @@ h3 {
 }
 
 h4 {
+  font-size: 1.433em;
+  line-height: 1.4;
+}
+
+h5 {
   font-size: 1.333em;
+  line-height: 1.33;
 }
 
 small {

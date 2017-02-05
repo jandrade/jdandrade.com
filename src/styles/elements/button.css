@@ -1,3 +1,7 @@
+/**
+  * block: button
+  * .button
+  */
 .button {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -6,5 +10,15 @@
 
   &:hover {
     background-color: color(var(--color-primary) blackness(20%));
+  }
+}
+
+/**
+  * block: link
+  * .link
+  */
+.link {
+  &:hover {
+    text-decoration: underline;
   }
 }

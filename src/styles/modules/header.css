@@ -1,22 +1,36 @@
+/**
+  * block: header
+  * .header
+  */
 .header {
   background-color: var(--color-light);
   padding: 1.5em 0;
   position: relative;
 
-  & .container {
+  & .wrapper {
     align-items: baseline;
     display: flex;
     flex-direction: column;
     padding-top: 0;
   }
 
+    /* overrides */
+    & .container {
+      position: relative;
+    }
+
+  /**
+   * block: header
+   * element: logo
+   * .header__logo
+   */
   &__logo {
     background-color: var(--color-light);
     border-radius: 50%;
     margin-left: -1.25em;
     padding: 1.25em;
     position: absolute;
-    bottom: -1.75em;
+    bottom: -3em;
 
     & img {
       width: 100px;
@@ -27,15 +41,36 @@
     }
   }
 
+  /**
+   * block: header
+   * element: title
+   * .header__title
+   */
   &__title {
-    font-size: 1.25em;
+    font-size: 1em;
     letter-spacing: 0.3px;
-    margin-left: 5.5em;
+    margin-left: 6em;
     margin-bottom: -1em;
     width: 4em;
 
     @media (--small-viewport) {
       margin-bottom: -1.25em;
+    }
+  }
+
+  &__social {
+    bottom: 0;
+    position: absolute;
+    right: 1em;
+
+    & svg {
+      height: 1.5em;
+      margin-left: 1em;
+      width: 1.5em;
+      
+      & path {
+        fill: var(--color-darker);
+      }
     }
   }
 }

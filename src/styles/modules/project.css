@@ -1,3 +1,7 @@
+/**
+  * block: project
+  * .project
+  */
 .project {
   border-bottom: 1px solid color(var(--color-primary) alpha(20%));
   margin: 2em 0;
@@ -8,20 +12,27 @@
     margin-bottom: 0;
   }
 
+  /**
+   * block: project
+   * element: header
+   * .project__header
+   */
   &__header {
     display: flex;
     padding: 1em 0;
   }
 
+  /**
+   * block: project
+   * element: title
+   * .project__title
+   */
   &__title {
     margin: 0;
   }
 
-  & .button {
-    margin-left: auto;
-  }
-
   /**
+   * block: project
    * element: picture
    * .project__picture
    */
@@ -39,6 +50,10 @@
     &:hover {
       box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.6);
     }
+  }
+
+  & .button {
+    margin-left: auto;
   }
 
   & img {

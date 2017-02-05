@@ -3,9 +3,8 @@
 
 # TEAM
 
-    <Juan David Andrade> -- <Developer> -- <juandavid_a82>
+    <Juan David Andrade> -- <Developer> -- <juandavidandrade@gmail.com>
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Modernizr
+    HTML5, CSS

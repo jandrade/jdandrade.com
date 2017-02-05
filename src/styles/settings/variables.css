@@ -2,20 +2,21 @@
  * Default settings
  */
 :root {
-  --font-size-sm: 16px;
-  --font-size-md: 18px;
+  --font-size-sm: 18px;
+  --font-size-md: 21px;
 
   /**
    * Fonts
    */
   --font-primary: 'Lato', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-  --font-secondary: 'Source Sans Pro', sans-serif;
+  --font-secondary: 'Open Sans', Arial, sans-serif;
+  --font-tertiary: 'Merriweather', serif;
 
   /**
    * Colors Palette
    */
   --color-white: #fff;
-  --color-lighter: #f2f2f2;
+  --color-lighter: #f3f3f3;
   --color-light: #c6c4c0;
   --color-dark: #737373;
   --color-darker: #5d5a58;
@@ -25,4 +26,4 @@
 /**
  * Media queries
  */
-@custom-media --small-viewport (max-width: 30em);
+@custom-media --small-viewport (max-width: 48em);
