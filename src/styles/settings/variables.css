@@ -19,8 +19,9 @@
   --color-lighter: #f3f3f3;
   --color-light: #c6c4c0;
   --color-dark: #737373;
-  --color-darker: #5d5a58;
+  --color-darker: #424242;
   --color-primary: #287bb6;
+  --color-primary-dark: #246898;
 }
 
 /**

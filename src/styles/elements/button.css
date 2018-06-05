@@ -5,11 +5,14 @@
 .button {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: color(var(--color-primary) blackness(20%));
+    color: var(--color-white);
+    text-decoration: none;
   }
 }
 

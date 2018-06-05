@@ -47,6 +47,7 @@
    * .header__title
    */
   &__title {
+    color: var(--color-darker);
     font-size: 1em;
     letter-spacing: 0.3px;
     margin-left: 6em;
